@@ -163,10 +163,10 @@ define_module
 'RmsVirtualDeviceMonitor' mdlRmsPcMon(vdvRms, rmsPc, rmsPcName, rmsPcDesc)
 
 // Virtual monitor for the Signage player
-'RmsVirtualDeviceMonitor' mdlRmsSignageMon(vdvRms, rmsBluray, rmsBlurayName, rmsBlurayDesc)
+'RmsVirtualDeviceMonitor' mdlRmsSignageMon(vdvRms, rmsSignage, rmsSignageName, rmsSignageDesc)
 
 // Virtual monitor for the Bluray player
-'RmsVirtualDeviceMonitor' mdlRmsBlurayMon(vdvRms, rmsPc, rmsPcName, rmsPcDesc)
+'RmsVirtualDeviceMonitor' mdlRmsBlurayMon(vdvRms, rmsBluray, rmsBlurayName, rmsBlurayDesc)
 
 // Virtual monitor for the additional rack fans
 'RmsVirtualDeviceMonitor' mdlRmsFan1Mon(vdvRms, rmsFan1, rmsFan1Name, rmsFan1Desc)
@@ -179,9 +179,6 @@ define_module
 
 // @TODO implement source usage monitoring
 'RmsVirtualDeviceMonitor' mdlRmsAssetLaptop1(vdvRms, vdvLaptop1, rmsLaptop1Name, rmsLaptop1Desc)
-'RmsVirtualDeviceMonitor' mdlRmsAssetLaptop2(vdvRms, vdvLaptop2, rmsLaptop2Name, rmsLaptop2Desc)
-'RmsVirtualDeviceMonitor' mdlRmsAssetLaptop3(vdvRms, vdvLaptop3, rmsLaptop3Name, rmsLaptop3Desc)
-'RmsVirtualDeviceMonitor' mdlRmsAssetLaptop4(vdvRms, vdvLaptop4, rmsLaptop4Name, rmsLaptop4Desc)
 
 // @TODO add camera monitoring (requires NetLinx / Duet control module for simple integration)
 
