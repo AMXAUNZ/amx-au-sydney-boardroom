@@ -260,6 +260,14 @@
 <FilePathName>lib\amx-rms-sdk\monitors\RmsPowerDistributionUnitMonitor.axs</FilePathName>
 <Comments></Comments>
 </File>
+<File CompileType="Netlinx" Type="Include"><Identifier>RmsSourceUsage</Identifier>
+<FilePathName>lib\amx-rms-sdk\monitors\RmsSourceUsage.axi</FilePathName>
+<Comments></Comments>
+</File>
+<File CompileType="Netlinx" Type="Module"><Identifier>RmsSourceUsageMonitor</Identifier>
+<FilePathName>lib\amx-rms-sdk\monitors\RmsSourceUsageMonitor.axs</FilePathName>
+<Comments></Comments>
+</File>
 <File CompileType="Netlinx" Type="Module"><Identifier>RmsSystemPowerMonitor</Identifier>
 <FilePathName>lib\amx-rms-sdk\monitors\RmsSystemPowerMonitor.axs</FilePathName>
 <Comments></Comments>

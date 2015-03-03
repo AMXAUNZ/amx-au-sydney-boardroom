@@ -7,6 +7,7 @@ program_name='rms-main'
 
 
 #include 'RmsEventListener'
+#include 'RmsSourceUsage'
 
 
 define_device
@@ -17,6 +18,8 @@ rmsPdxl2 = 34002:1:0
 rmsMpl = 34003:1:0
 rmsFan1 = 34004:1:0
 rmsFan2 = 34005:1:0
+rmsSignage = 34006:1:0
+rmsBluray = 34007:1:0
 
 
 define_variable
@@ -50,6 +53,18 @@ volatile char rmsFan1Name[] = 'Rack fan 1'
 volatile char rmsFan1Desc[] = 'Controllable active cooling'
 volatile char rmsFan2Name[] = 'Rack fan 2'
 volatile char rmsFan2Desc[] = 'Controllable active cooling'
+volatile char rmsLaptop1Name[] = 'Laptop 1'
+volatile char rmsLaptop1Desc[] = 'Laptop Input 1'
+volatile char rmsLaptop2Name[] = 'Laptop 2'    
+volatile char rmsLaptop2Desc[] = 'Laptop Input 2'
+volatile char rmsLaptop3Name[] = 'Laptop 3'    
+volatile char rmsLaptop3Desc[] = 'Laptop Input 3'
+volatile char rmsLaptop4Name[] = 'Laptop 4'    
+volatile char rmsLaptop4Desc[] = 'Laptop Input 4'
+volatile char rmsSignageName[] = 'Signage'    
+volatile char rmsSignageDesc[] = 'Digital Signage Player'
+volatile char rmsBlurayName[] = 'Bluray Player'    
+volatile char rmsBlurayDesc[] = 'Samsung BDD5500 Bluray Player'
 
 
 // Rms callbacks
@@ -124,6 +139,9 @@ define_module
 'RmsGenericNetLinxDeviceMonitor' mdlRmsTxTable3Mon(vdvRms, dvTxTable3Main)
 'RmsGenericNetLinxDeviceMonitor' mdlRmsTxTable4Mon(vdvRms, dvTxTable4Main)
 
+// Enzo
+'RmsGenericNetLinxDeviceMonitor' mdlRmsEnzoMon(vdvRms, dvEnzo)
+
 // external relay box
 'RmsGenericNetLinxDeviceMonitor' mdlRmsRelayMon(vdvRms, dvRelaysRelBox)
 
@@ -144,6 +162,12 @@ define_module
 // Virtual monitor for the rack PC
 'RmsVirtualDeviceMonitor' mdlRmsPcMon(vdvRms, rmsPc, rmsPcName, rmsPcDesc)
 
+// Virtual monitor for the Signage player
+'RmsVirtualDeviceMonitor' mdlRmsSignageMon(vdvRms, rmsBluray, rmsBlurayName, rmsBlurayDesc)
+
+// Virtual monitor for the Bluray player
+'RmsVirtualDeviceMonitor' mdlRmsBlurayMon(vdvRms, rmsPc, rmsPcName, rmsPcDesc)
+
 // Virtual monitor for the additional rack fans
 'RmsVirtualDeviceMonitor' mdlRmsFan1Mon(vdvRms, rmsFan1, rmsFan1Name, rmsFan1Desc)
 'RmsVirtualDeviceMonitor' mdlRmsFan1Mon(vdvRms, rmsFan2, rmsFan2Name, rmsFan2Desc)
@@ -154,6 +178,10 @@ define_module
 // @TODO register blinds and shades
 
 // @TODO implement source usage monitoring
+'RmsVirtualDeviceMonitor' mdlRmsAssetLaptop1(vdvRms, vdvLaptop1, rmsLaptop1Name, rmsLaptop1Desc)
+'RmsVirtualDeviceMonitor' mdlRmsAssetLaptop2(vdvRms, vdvLaptop2, rmsLaptop2Name, rmsLaptop2Desc)
+'RmsVirtualDeviceMonitor' mdlRmsAssetLaptop3(vdvRms, vdvLaptop3, rmsLaptop3Name, rmsLaptop3Desc)
+'RmsVirtualDeviceMonitor' mdlRmsAssetLaptop4(vdvRms, vdvLaptop4, rmsLaptop4Name, rmsLaptop4Desc)
 
 // @TODO add camera monitoring (requires NetLinx / Duet control module for simple integration)
 

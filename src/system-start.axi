@@ -17,6 +17,18 @@ PROGRAM_NAME='system-start'
  * --------------------
  */
 define_start
+RmsSourceUsageAssignAsset(dvDvxVidInEnzo.port, dvEnzo)
+RmsSourceUsageAssignAsset(dvDvxVidInSignage.port, rmsSignage)
+RmsSourceUsageAssignAsset(dvDvxVidInPc.port, rmsPc)
+RmsSourceUsageAssignAsset(dvDvxVidInBluray.port, rmsBluray)
+RmsSourceUsageAssignAsset(dvDvxVidInTx1.port, vdvLaptop1)
+RmsSourceUsageAssignAsset(dvDvxVidInTx2.port, vdvLaptop2)
+RmsSourceUsageAssignAsset(dvDvxVidInTx3.port, vdvLaptop3)
+RmsSourceUsageAssignAsset(dvDvxVidInTx4.port, vdvLaptop4)
+
+// reset all sources on program startup
+RmsSourceUsageReset();
+
 
 initArea (dropAreasTpTable[dvDvxVidOutMonitorLeft.port],  438,  164, 320, 180)
 initArea (dropAreasTpTable[dvDvxVidOutMonitorRight.port], 1163, 164, 320, 180)
